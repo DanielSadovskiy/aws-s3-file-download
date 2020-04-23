@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <style type="text/css">
+      label {
+        margin-top: 10px;
+        margin-bottom: 5px;;
+      }
+      div {
+        margin-top: 10px;
+      }
+      button {
+        margin: 5px;
+      }
+      #attack{
+        max-height: 400px;
+      }
+      .item {
+        min-width: 300px;
+        padding: 10px;
+        border-bottom: 1px solid black;
+      }
+      #creator-info {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+      }
+    </style>
+  </head>
+  <body style="display:flex; align-items:center; flex-direction:column;">
+    <form style="display: flex; flex-direction: column; width: 600px">
+      <input id="gaslo" type="text" placeholder="Key">
+
+      <div class="align-numbers" style="display: flex;justify-content: space-between;">
+        <div>
+          <label for="type-eng">A</label>
+          <input id="num-1" type="number"/>
+        </div>
+        <div>
+          <label for="type-eng">B</label>
+          <input id="num-2" type="number"/>
+        </div>
+        <div>
+          <label for="type-eng">C</label>
+          <input id="num-3" type="number"/>
+        </div>
+      </div>
+      <div style="display: flex;justify-content: space-between;">
+        <div>
+          <label for="type-eng">english</label>
+          <input id="type-eng" type="radio" name="type" checked="true"/>
+        </div>
+
+        <div>
+          <label for="type-ukr">ukrainian</label>
+          <input id="type-ukr" type="radio" name="type" />
+        </div>
+
+        <div>
+          <label for="type-ukr">with key</label>
+          <input id="gaslo-encode" type="checkbox" name="type" />
+        </div>
+      </div>
+    
+      <label for="encode-data">Input text</label>
+      <textarea id="encode-data"  rows = "2" cols = "50" placeholder="Input text to encode"></textarea>
+    </form>
+    
+
+   <div>
+    <button id="encode-btn">
+      encode
+    </button>
+
+    <button id="decode-btn">
+      decode
+    </button>
+   </div>
+    
+    <div id="encoded-output"></div>
+    <div id="decoded-output"></div>
+    <div id="dict"></div>
+
+    
+    <script src="./node_modules/mathjs/dist/math.js" type="text/javascript"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
